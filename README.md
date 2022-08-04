@@ -8,6 +8,10 @@ DEMO [HERE](https://kkiirill.github.io/list-of-users)
 
 ![image](https://user-images.githubusercontent.com/87207157/182888881-5bb72138-41df-4202-b987-5b0b905a67dd.png)
 
+![image](https://user-images.githubusercontent.com/87207157/182889019-cf6abdab-e46d-4815-b04e-0aa1e3aff24a.png)
+
+![image](https://user-images.githubusercontent.com/87207157/182889055-5170d09d-05e6-4bf3-8c31-e4e719a7f6ac.png)
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
