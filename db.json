@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fullName": "Z",
+      "phone": "XXX",
+      "email": "X",
+      "country": "XX",
+      "adress": "XXX"
+    },
+    {
+      "id": 2,
+      "fullName": "aaaa",
+      "phone": "a",
+      "email": "a",
+      "country": "aa",
+      "adress": "aa"
+    },
+    {
+      "id": 3,
+      "fullName": "klkjll",
+      "phone": "dfd",
+      "email": "ddf",
+      "country": "dfd",
+      "adress": "fdfd"
+    }
+  ],
+  "comments": [],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "John Denver",
+      "mobileNumber": "8452315785",
+      "email": "j.denver@gmail.com",
+      "country": "USA",
+      "adress": "NY avenue 31"
+    }
+  ]
+}

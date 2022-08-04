@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png"
+    alt="user"
+    class="card-img-top"
+  />
+  <div class="card-header">User{{userData?.id}}</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{userData?.fullName}}</li>
+    <li class="list-group-item">{{userData?.mobileNumber}}</li>
+    <li class="list-group-item">{{userData?.email}}</li>
+    <li class="list-group-item">{{userData?.country}}</li>
+    <li class="list-group-item">{{userData?.adress}}</li>
+  </ul>
+  <button class="btn btn-primary" type="button" routerLink="/users">back home</button>
+</div>

@@ -1,0 +1,182 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">List of users</span>
+    <button type="button" (click)=" openFormModalAdd()" class="btn btn-dark">
+      Add new user
+    </button>
+  </div>
+</nav>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Country</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersData">
+      <td>{{ user.id }}</td>
+      <td>{{ user.fullName }}</td>
+      <td>{{ user.mobileNumber }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.country }}</td>
+      <td>{{ user.adress }}</td>
+      <td>
+        <button class="btn btn-info" routerLink="/users/{{ user.id }}">
+          more info
+        </button>
+        <button
+          class="btn btn-primary mx-4"
+          (click)="editUser(user)"
+        >
+          Edit
+        </button>
+        <button class="btn btn-danger" (click)="deleteUser(user)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New user</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue" (ngSubmit)="submit()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Full name</label>
+            <input
+              type="text"
+              formControlName="fullName"
+              class="form-control"
+              placeholder="Enter Your Full name"
+              formControlName="fullName"
+              id="fullName"
+            />
+            <div
+              *ngIf="f.fullName.touched && f.fullName.invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f.fullName.errors.required">
+                Full Name is required.
+              </div>
+              <div *ngIf="f.fullName.errors.pattern">
+                Please, Enter Your Full Name.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone</label>
+            <input
+              class="form-control"
+              placeholder="Enter Your phone Number"
+              formControlName="mobileNumber"
+              id="mobileNumber"
+              type="text"
+            />
+            <div
+              *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f.mobileNumber.errors.required">
+                Mobile Number is required.
+              </div>
+              <div *ngIf="f.mobileNumber.errors.pattern">
+                Please, Enter 10 digit Mobile Number.
+              </div>
+            </div>
+            >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+
+              placeholder="Enter Your email"
+            />
+            <div
+              *ngIf="f.email.touched && f.email.invalid"
+              class="alert alert-danger"
+            >
+              <div *ngIf="f.email.errors.required">
+                Email is required.
+              </div>
+              <div *ngIf="f.email.errors.pattern">
+                Please, Enter correct email.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Country</label>
+            <input
+              type="text"
+              formControlName="country"
+              class="form-control"
+              placeholder="Enter Your country"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Adress</label>
+            <input
+              type="text"
+              formControlName="adress"
+              class="form-control"
+              placeholder="Enter Your adress"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="close"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button
+          class="btn btn-primary"
+          (click)="postUsersDetails()"
+          type="submit"
+          [disabled]="!formValue.valid"
+          *ngIf="showAdd"
+        >
+          Add
+        </button>
+        <button
+          class="btn btn-info mx-4"
+          (click)="updateUser()"
+          [disabled]="!formValue.valid"
+          *ngIf="showEdit"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fullName": "Z",
+      "phone": "XXX",
+      "email": "X",
+      "country": "XX",
+      "adress": "XXX"
+    },
+    {
+      "id": 2,
+      "fullName": "aaaa",
+      "phone": "a",
+      "email": "a",
+      "country": "aa",
+      "adress": "aa"
+    },
+    {
+      "id": 3,
+      "fullName": "klkjll",
+      "phone": "dfd",
+      "email": "ddf",
+      "country": "dfd",
+      "adress": "fdfd"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "id": 0,
+    "fullName": "sdad",
+    "phone": "asdasdas",
+    "email": "dasdasd",
+    "country": "asda",
+    "adress": "sdasd"
+  }
+}
