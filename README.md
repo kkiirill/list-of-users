@@ -1,4 +1,12 @@
-# ListOfUsers
+# List Of Users
+
+
+
+This application was made using Angular 9, Angular Router, bootstrap UI framework.
+
+DEMO [HERE](https://kkiirill.github.io/list-of-users)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
