@@ -1,10 +1,11 @@
 # List Of Users
 
 
-This application was made using Angular 9, Angular Router, bootstrap UI framework.
+This application was made using Angular 9, Angular Router, bootstrap UI framework, json-server, CRUD.
 
 DEMO [HERE](https://kkiirill.github.io/list-of-users)
 
+![users-list](https://user-images.githubusercontent.com/87207157/182929990-ee622e32-f401-4453-99b6-811bb747db66.gif)
 
 ![image](https://user-images.githubusercontent.com/87207157/182888881-5bb72138-41df-4202-b987-5b0b905a67dd.png)
 
